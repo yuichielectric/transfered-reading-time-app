@@ -175,6 +175,7 @@ def lintTest() {
 }
 
 def preview() {
+    return
 
     if (env.DEMO_DISABLE_PREVIEW == "true") {
         return
@@ -193,6 +194,7 @@ def preview() {
 }
 
 def preProduction() {
+    return
 
     if (env.DEMO_DISABLE_PREPROD == "true") {
         return
@@ -208,6 +210,7 @@ def preProduction() {
 }
 
 def manualPromotion() {
+    return
 
     if (env.DEMO_DISABLE_PROD == "true") {
         return
@@ -224,6 +227,7 @@ def manualPromotion() {
 }
 
 def production() {
+    return
 
     if (env.DEMO_DISABLE_PROD == "true") {
         return
