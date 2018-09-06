@@ -26,6 +26,12 @@ public class BookTest {
     }
 
     @Test
+    public void testConstructorWithRating() {
+        Book book = new Book("Kurt Vonnegut", "Slapstick", "scum.png", 5);
+        Assert.assertEquals(5, book.getRating().intValue());
+    }
+
+    @Test
     public void testGetCover() {
         book.setCover("slapstick.jpg");
         Assert.assertEquals("slapstick.jpg", book.getCover());
