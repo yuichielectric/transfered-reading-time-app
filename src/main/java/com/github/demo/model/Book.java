@@ -1,7 +1,5 @@
 package com.github.demo.model;
 
-import javax.print.DocFlavor;
-
 /**
  * Model class for book.
  */
