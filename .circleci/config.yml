@@ -1,0 +1,19 @@
+version: 2
+jobs:
+  build:
+    working_directory: ~/circleci-demo-java-spring
+
+    docker:
+      - image: circleci/openjdk:8-jdk-browsers
+
+    steps:
+
+      - checkout
+
+      - save_cache: # saves the project dependencies
+          paths:
+            - ~/.m2
+          key: circleci-demo-java-spring-{{ checksum "pom.xml" }}
+      
+      - run: mvn test
+          path: target/surefire-reports
