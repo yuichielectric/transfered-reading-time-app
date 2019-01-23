@@ -219,9 +219,7 @@
 			  <name>listener</name>
 			  <value>org.sonar.java.jacoco.JUnitListener</value>
 			</property>
-                  <configuration>
                       <useSystemClassLoader>false</useSystemClassLoader>
-                  </configuration>
 		      </properties>
 		    </configuration>
 		  </plugin>
