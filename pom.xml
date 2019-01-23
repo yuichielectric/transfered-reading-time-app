@@ -109,11 +109,11 @@
                     <logViolationsToConsole>true</logViolationsToConsole>
                     <checkstyleRules>
                         <module name="Checker">
-                        <module name="TreeWalker">
-                        <module name="MethodName">
-                                <property name="format" value="^[a-z](_?[a-zA-Z0-9]+)*$"/>
+                            <module name="TreeWalker">
+                                <module name="MethodName">
+                                    <property name="format" value="^[a-z](_?[a-zA-Z0-9]+)*$"/>
+                                </module>
                             </module>
-                        </module>
                         </module>
                     </checkstyleRules>
                 </configuration>
@@ -142,15 +142,15 @@
                 </configuration>
             </plugin>
             <plugin>
-		<groupId>com.heroku.sdk</groupId>
-		<artifactId>heroku-maven-plugin</artifactId>
-		<version>1.1.3</version>
-                  <configuration>
-                           <includes>
-                                    <include>src/main/webapp</include>
-                           </includes>
-                  </configuration>
-	   </plugin>
+                <groupId>com.heroku.sdk</groupId>
+                <artifactId>heroku-maven-plugin</artifactId>
+                <version>1.1.3</version>
+                <configuration>
+                    <includes>
+                        <include>src/main/webapp</include>
+                    </includes>
+                </configuration>
+            </plugin>
         </plugins>
     </build>
     <reporting>
@@ -181,18 +181,20 @@
             </plugin>
         </plugins>
     </reporting>
-    <description>A Java example project to demonstrate a Java development stack with Maven, Travis CI and Heroku deployments.</description>
+    <description>A Java example project to demonstrate a Java development stack with Maven, Travis CI and Heroku
+        deployments.
+    </description>
     <distributionManagement>
-  	<repository>
-		<id>central</id>
-		<name>githubdemo-releases</name>
-        	<url>https://githubdemo.jfrog.io/githubdemo/libs-release-local</url>
-    	</repository>
-	<snapshotRepository>
-		<id>snapshots</id>
-		<name>githubdemo-snapshots</name>
-		<url>https://githubdemo.jfrog.io/githubdemo/libs-snapshot-local</url>
-	</snapshotRepository>
+        <repository>
+            <id>central</id>
+            <name>githubdemo-releases</name>
+            <url>https://githubdemo.jfrog.io/githubdemo/libs-release-local</url>
+        </repository>
+        <snapshotRepository>
+            <id>snapshots</id>
+            <name>githubdemo-snapshots</name>
+            <url>https://githubdemo.jfrog.io/githubdemo/libs-snapshot-local</url>
+        </snapshotRepository>
     </distributionManagement>
     <ciManagement>
         <system>Travis CI</system>
@@ -203,37 +205,37 @@
         <system>GitHub Issues</system>
     </issueManagement>
 
-    <profiles>	
-	<profile>
-		<id>coverage-per-test</id>
-		<build>
-		<plugins>
-		  <plugin>
-		    <groupId>org.apache.maven.plugins</groupId>
-		    <artifactId>maven-surefire-plugin</artifactId>
-		    <!-- Minimal supported version is 2.4 -->
-		    <version>2.17</version>
-		    <configuration>
-                <useSystemClassLoader>false</useSystemClassLoader>
-		      <properties>
-			<property>
-			  <name>listener</name>
-			  <value>org.sonar.java.jacoco.JUnitListener</value>
-			</property>
-		      </properties>
-		    </configuration>
-		  </plugin>
-		</plugins>
-		</build>
+    <profiles>
+        <profile>
+            <id>coverage-per-test</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-surefire-plugin</artifactId>
+                        <!-- Minimal supported version is 2.4 -->
+                        <version>2.17</version>
+                        <configuration>
+                            <useSystemClassLoader>false</useSystemClassLoader>
+                            <properties>
+                                <property>
+                                    <name>listener</name>
+                                    <value>org.sonar.java.jacoco.JUnitListener</value>
+                                </property>
+                            </properties>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
 
-		<dependencies>
-			<dependency>
-			  <groupId>org.sonarsource.java</groupId>
-			  <artifactId>sonar-jacoco-listeners</artifactId>
-			  <version>3.8</version>
-			  <scope>test</scope>
-			</dependency>
-		</dependencies>
-	</profile>
-  </profiles>
+            <dependencies>
+                <dependency>
+                    <groupId>org.sonarsource.java</groupId>
+                    <artifactId>sonar-jacoco-listeners</artifactId>
+                    <version>3.8</version>
+                    <scope>test</scope>
+                </dependency>
+            </dependencies>
+        </profile>
+    </profiles>
 </project>
