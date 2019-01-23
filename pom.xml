@@ -155,6 +155,25 @@
                     </includes>
                 </configuration>
             </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <!-- Minimal supported version is 2.4 -->
+                <version>2.20.1</version>
+                <configuration>
+                    <!-- CircleCI build workaround -->
+                    <!-- <argLine>${surefireArgLine} -Xms1024m -Xmx2048m</argLine>
+                    <reuseForks>true</reuseForks> -->
+                    <useSystemClassLoader>false</useSystemClassLoader>
+                    <!-- <properties>
+                        <property>
+                            <name>listener</name>
+                            <value>org.sonar.java.jacoco.JUnitListener</value>
+                        </property>
+                    </properties>
+                    -->
+                </configuration>
+            </plugin>
         </plugins>
     </build>
     <reporting>
