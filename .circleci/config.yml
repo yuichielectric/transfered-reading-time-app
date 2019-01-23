@@ -33,8 +33,8 @@ jobs:
     steps:
     - checkout
     - run:
-      name: Deploy
-      command: mvn heroku:deploy -DskipTests=true -Dmaven.javadoc.skip=true -B -V -D heroku.appName=${HEROKU_APP_PROD}
+        name: Deploy
+        command: mvn heroku:deploy -DskipTests=true -Dmaven.javadoc.skip=true -B -V -D heroku.appName=${HEROKU_APP_PROD}
 workflows:
   version: 2
 
