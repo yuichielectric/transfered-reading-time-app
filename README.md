@@ -1,5 +1,3 @@
-[![CircleCI](https://circleci.com/gh/yuichielectric/japan-it-week-demo.svg?style=svg&circle-token=34f7e705e0e989f9ca9721c459345a55bad74cd8)](https://circleci.com/gh/yuichielectric/japan-it-week-demo)
-
 # Reading Time
 Reading Time is a web application that lists staff recommended books.
 
