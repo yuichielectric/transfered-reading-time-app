@@ -214,12 +214,12 @@
 		    <!-- Minimal supported version is 2.4 -->
 		    <version>2.17</version>
 		    <configuration>
+                <useSystemClassLoader>false</useSystemClassLoader>
 		      <properties>
 			<property>
 			  <name>listener</name>
 			  <value>org.sonar.java.jacoco.JUnitListener</value>
 			</property>
-                      <useSystemClassLoader>false</useSystemClassLoader>
 		      </properties>
 		    </configuration>
 		  </plugin>
