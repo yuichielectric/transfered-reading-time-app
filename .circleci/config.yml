@@ -16,8 +16,8 @@ jobs:
     steps:
     - checkout
     - run:
-      name: Build
-      command: mvn clean install -DskipTests=true -Dmaven.javadoc.skip=true -Dcheckstyle.skip=true -B -V
+        name: Build
+        command: mvn clean install -DskipTests=true -Dmaven.javadoc.skip=true -Dcheckstyle.skip=true -B -V
     - run:
-      name: Unit Tests
-      command: mvn test -B -Dmaven.javadoc.skip=true -Dcheckstyle.skip=true
+        name: Unit Tests
+        command: mvn test -B -Dmaven.javadoc.skip=true -Dcheckstyle.skip=true
