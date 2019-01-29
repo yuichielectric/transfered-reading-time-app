@@ -7,7 +7,7 @@ import org.junit.Test;
 
 import java.util.List;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.*;
 
 /**
  * Unit test for BookService
@@ -20,6 +20,14 @@ public class BookServiceTest {
     public void testGetBooks() {
         List<Book> books = bookService.getBooks();
         assertEquals("list length must be 4", 4, books.size());
+    }
+
+    @Test
+    public void testBookTitles() {
+        List<Book> books = bookService.getBooks();
+        for (Book book : books) {
+            assertNotEquals("Book title must not be empty", 0, book.getTitle().length());
+        }
     }
 
     @Before
