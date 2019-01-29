@@ -17,12 +17,6 @@ public class BookServiceTest {
     private BookService bookService;
 
     @Test
-    public void testGetBooks() {
-        List<Book> books = bookService.getBooks();
-        assertEquals("list length must be 4", 4, books.size());
-    }
-
-    @Test
     public void testBookTitles() {
         List<Book> books = bookService.getBooks();
         for (Book book : books) {
