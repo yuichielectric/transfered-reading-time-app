@@ -79,6 +79,9 @@
                 <version>1.1.1</version>
                 <configuration>
                     <assembleDirectory>target</assembleDirectory>
+                    <extraJvmArguments>
+                        -javaagent:/app/newrelic/newrelic.jar
+                    </extraJvmArguments>
                     <programs>
                         <program>
                             <mainClass>com.github.demo.launch.Main</mainClass>
