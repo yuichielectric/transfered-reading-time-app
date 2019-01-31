@@ -162,6 +162,7 @@
                 <configuration>
                     <includes>
                         <include>src/main/webapp</include>
+                        <include>newrelic</include>
                     </includes>
                 </configuration>
             </plugin>
